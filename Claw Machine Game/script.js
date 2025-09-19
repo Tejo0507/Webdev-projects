@@ -104,3 +104,27 @@
       this.el.classList.remove('active')
     }
   }
+    class WorldObject {
+    constructor(props) {
+      Object.assign(this, {
+        x: 0,
+        y: 0,
+        z: 0,
+        angle: 0,
+        transformOrigin: { x: 0, y: 0 },
+        interval: null,
+        default: {},
+        moveWith: [],
+        el: props.className && document.querySelector(`.${props.className}`),
+        ...props,
+      })
+      this.setStyles()
+      if (props.className) {
+        const { width, height } = this.el.getBoundingClientRect()
+        this.w = width
+        this.h = height
+      }
+      ;['x', 'y', 'w', 'h'].forEach(key => {
+        this.default[key] = this[key]
+      })
+    }

@@ -48,3 +48,21 @@
     x: 36,
     y: 16,
   }
+
+  const radToDeg = rad => Math.round(rad * (180 / Math.PI))
+  const calcX = (i, n) => i % n
+  const calcY = (i, n) => Math.floor(i / n)
+
+  const {
+    width: machineWidth,
+    height: machineHeight,
+    top: machineTop,
+  } = document.querySelector('.claw-machine').getBoundingClientRect()
+
+  const { height: machineTopHeight } = document
+    .querySelector('.machine-top')
+    .getBoundingClientRect()
+
+  const { height: machineBottomHeight, top: machineBottomTop } = document
+    .querySelector('.machine-bottom')
+    .getBoundingClientRect()

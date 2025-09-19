@@ -160,3 +160,7 @@
       this.interval = null
       this.move({ moveKey, target, moveTime, next })
     }
+
+    resizeShadow() {
+      elements.box.style.setProperty('--scale', 0.5 + this.h / maxArmLength / 2)
+    }

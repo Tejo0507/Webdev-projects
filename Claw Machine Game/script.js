@@ -150,3 +150,13 @@
           : `${transformOrigin.x}px ${transformOrigin.y}px`
       this.setStyles()
     }
+
+     handleNext(next) {
+      clearInterval(this.interval)
+      if (next) next()
+    }
+
+     handleNext(next) {
+      clearInterval(this.interval)
+      if (next) next()
+    }

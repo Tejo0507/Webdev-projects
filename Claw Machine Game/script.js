@@ -164,3 +164,36 @@
     resizeShadow() {
       elements.box.style.setProperty('--scale', 0.5 + this.h / maxArmLength / 2)
     }
+
+     move({ moveKey, target, moveTime, next }) {
+      if (this.interval) {
+        this.handleNext(next)
+      } else {
+        const moveTarget = target || this.default[moveKey]
+        this.interval = setInterval(() => {
+          const distance =
+            Math.abs(this[moveKey] - moveTarget) < 10
+              ? Math.abs(this[moveKey] - moveTarget)
+              : 10
+          const increment = this[moveKey] > moveTarget ? -distance : distance
+          if (
+            increment > 0
+              ? this[moveKey] < moveTarget
+              : this[moveKey] > moveTarget
+          ) {
+            this[moveKey] += increment
+            this.setStyles()
+            if (moveKey === 'h') this.resizeShadow()
+            if (this.moveWith.length) {
+              this.moveWith.forEach(obj => {
+                if (!obj) return
+                obj[moveKey === 'h' ? 'y' : moveKey] += increment
+                obj.setStyles()
+              })
+            }
+          } else {
+            this.handleNext(next)
+          }
+        }, moveTime || 100)
+      }
+    }

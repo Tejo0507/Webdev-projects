@@ -38,3 +38,13 @@
     },
   }
 
+  const sortedToys = [...Object.keys(toys), ...Object.keys(toys)].sort(
+    () => 0.5 - Math.random(),
+  )
+
+  const cornerBuffer = 16
+
+  const machineBuffer = {
+    x: 36,
+    y: 16,
+  }

@@ -5,3 +5,8 @@
     collectionArrow: document.querySelector('.collection-arrow'),
     toys: [],
   }
+
+  const settings = {
+    targetToy: null,
+    collectedNumber: 0,
+  }

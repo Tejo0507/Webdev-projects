@@ -128,3 +128,25 @@
         this.default[key] = this[key]
       })
     }
+    setStyles() {
+     Object.assign(this.el.style, {
+        left: `${this.x}px`,
+        top: !this.bottom && `${this.y}px`,
+        bottom: this.bottom,
+        width: `${this.w}px`,
+        height: `${this.h}px`,
+        transformOrigin: this.transformOrigin,
+      })
+      this.el.style.zIndex = this.z
+    }
+    setClawPos(clawPos) {
+      this.clawPos = clawPos
+    }
+
+    setTransformOrigin(transformOrigin) {
+      this.transformOrigin =
+        transformOrigin === 'center'
+          ? 'center'
+          : `${transformOrigin.x}px ${transformOrigin.y}px`
+      this.setStyles()
+    }

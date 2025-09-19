@@ -156,7 +156,7 @@
       if (next) next()
     }
 
-     handleNext(next) {
-      clearInterval(this.interval)
-      if (next) next()
+    resumeMove({ moveKey, target, moveTime, next }) {
+      this.interval = null
+      this.move({ moveKey, target, moveTime, next })
     }

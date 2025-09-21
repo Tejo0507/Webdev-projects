@@ -178,3 +178,18 @@ body {
   --h: 24px;
   z-index: 0;
 }
+
+.rail {
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  border: solid var(--blue);
+}
+
+.rail.hori {
+  --h: 5px;
+  width: 100%;
+  background-color: #fff;
+  border-width: 2px 0;
+  z-index: 1;
+}

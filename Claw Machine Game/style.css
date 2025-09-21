@@ -47,3 +47,12 @@ body {
   border: 2px solid var(--brown);
   overflow: hidden;
 }
+
+.collection-box {
+  --h: 32px;
+  width: calc(var(--m) * var(--machine-width));
+  margin: calc(var(--m) * var(--h) * -1 - 10px) 0 24px;
+  display: flex;
+  align-items: bottom;
+  justify-content: start;
+}

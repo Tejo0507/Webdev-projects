@@ -164,3 +164,17 @@ body {
   background-color: #70f7f372;
   z-index: 1;
 }
+
+.machine-bottom {
+  bottom: 0;
+  background-color: #def7f6;
+}
+
+.collection-point {
+  position: absolute;
+  bottom: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAMCAYAAABm+U3GAAAAAXNSR0IArs4c6QAAADBJREFUOE9jtJqy/T8DFcGxHE9GkHGM1DYYZCjIcJoYTDMXjxqMkrZGIw8eHEMvKADnSiE1EAXSagAAAABJRU5ErkJggg==);
+  --w: 44px;
+  --h: 24px;
+  z-index: 0;
+}

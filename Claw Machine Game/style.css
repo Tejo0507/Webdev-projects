@@ -73,4 +73,14 @@ body {
 .toy-wrapper.squeeze-in {
   width: 0;
   animation: squeeze-in forwards 0.4s;
-  
+  animation-delay: 1.4s;
+}
+
+@keyframes squeeze-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% / 6);
+  }
+}

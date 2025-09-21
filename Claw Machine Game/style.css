@@ -95,3 +95,10 @@ body {
     transform: translateY(0);
   }
 }
+
+.toy-wrapper .toy {
+  opacity: 0;
+  transform: translateY(-100vh);
+  animation: forwards show-toy-2 0.8s;
+  animation-delay: 1s;
+}

@@ -40,3 +40,10 @@ body {
   image-rendering: pixelated;
   background-size: calc(var(--w) * var(--m)) calc(var(--h) * var(--m));
 }
+
+.claw-machine {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--brown);
+  overflow: hidden;
+}

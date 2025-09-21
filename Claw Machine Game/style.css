@@ -102,3 +102,23 @@ body {
   animation: forwards show-toy-2 0.8s;
   animation-delay: 1s;
 }
+
+.claw-machine.show-overlay::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--machine-color);
+  opacity: 0.6;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.box {
+  position: relative;
+  background-color: #7fcfed;
+  --w: var(--machine-width);
+  --h: 180px;
+}

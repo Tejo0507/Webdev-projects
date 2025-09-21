@@ -25,3 +25,9 @@ body {
   min-height: 600px;
   flex-direction: column;
 }
+
+.pix::before,
+.pix::after {
+  position: absolute;
+  content: '';
+}

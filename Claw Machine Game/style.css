@@ -31,3 +31,12 @@ body {
   position: absolute;
   content: '';
 }
+
+.pix,
+.pix::before,
+.pix::after {
+  width: calc(var(--w) * var(--m));
+  height: calc(var(--h) * var(--m));
+  image-rendering: pixelated;
+  background-size: calc(var(--w) * var(--m)) calc(var(--h) * var(--m));
+}

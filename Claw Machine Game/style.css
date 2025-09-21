@@ -122,3 +122,11 @@ body {
   --w: var(--machine-width);
   --h: 180px;
 }
+
+.box::before {
+  background-color: var(--brown);
+  top: calc(70px * var(--m));
+  width: 100%;
+  height: calc(var(--m) * 8px);
+  z-index: 5;
+}

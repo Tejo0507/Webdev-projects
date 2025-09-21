@@ -16,3 +16,12 @@ body {
   --machine-width: 160px;
   --m: 2;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 600px;
+  flex-direction: column;
+}

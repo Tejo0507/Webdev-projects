@@ -69,3 +69,8 @@ body {
   top: auto;
   bottom: 0;
 }
+
+.toy-wrapper.squeeze-in {
+  width: 0;
+  animation: squeeze-in forwards 0.4s;
+  

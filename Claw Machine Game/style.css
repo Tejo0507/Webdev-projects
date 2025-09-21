@@ -130,3 +130,20 @@ body {
   height: calc(var(--m) * 8px);
   z-index: 5;
 }
+
+.box::after {
+  background-color: var(--machine-color);
+  top: calc(70px * var(--m));
+  right: 0px;
+  width: calc(var(--m) * 8px);
+  height: calc(var(--m) * 170px);
+  z-index: 2;
+}
+
+.machine-top,
+.machine-bottom {
+  position: absolute;
+  width: 100%;
+  --h: 70px;
+  height: calc(var(--h) * var(--m));
+}

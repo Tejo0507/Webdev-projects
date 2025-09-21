@@ -193,3 +193,11 @@ body {
   border-width: 2px 0;
   z-index: 1;
 }
+
+.rail.vert {
+  position: absolute;
+  --h: 70px;
+  --w: 5px;
+  background-color: #fff;
+  border-width: 0 2px;
+}
